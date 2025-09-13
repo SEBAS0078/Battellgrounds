@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+
+/* ---------------- Root Variables ---------------- */
+:root {
+    --cyan: #00ffff;
+    --magenta: #ff00ff;
+}
+
+/* ---------------- Body ---------------- */
+body {
+    font-family: 'Cabin', monospace;
+    background:  linear-gradient( #ffffff, #b0b0b0);
+    color:  #000000; 
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* ---------------- Header ---------------- */
+.header {
+    position: relative;         /* allows absolute positioning for .logo */
+    display: flex;
+    align-items: center;        /* vertically center everything */
+    background-color: #3e3e3e;
+    padding: 5%;
+    margin: 0px; 
+
+}
+
+/* Center section: logo + title */
+.logo {
+    position: absolute;         /* remove from normal flow */
+    left: 45%;                  /* move center */
+    transform: translateX(-50%);/* truly center it */
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Logo image */
+#cup-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    size: 50%;
+}
+
+/* Header text */
+.header h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    text-shadow: 1px 1px var(--magenta), -1px -1px var(--cyan);
+    margin: 0;               /* remove extra margins */
+}
+
+/* Navbar (right side) */
+nav {
+    margin-left: auto;          /* push navbar to the right */
+    display: flex;
+    background-color: #545454;
+    padding: 1%;
+    border-radius: 10px;
+    gap: 10px;                  /* space between links */
+}
+
+
+#cup-logo:hover {
+    transform: scale(1.1);
+}
+
+/* ---------------- Typography ---------------- */
+h2 {
+    text-align: center;
+    text-shadow: 1px 1px var(--magenta), -1px -1px var(--cyan);
+}
+
+p {
+    font-family: 'Cabin', monospace;
+    text-align: center;
+}
+
+/* ---------------- Navigation ---------------- */
+
+
+nav a {
+    color: var(--cyan);
+    text-decoration: none;
+    padding: 8px;
+    font-size: large;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 0, 255, 0.2);
+    text-shadow: 0px 0px 8px var(--magenta), 0px 0px 12px var(--cyan);
+    transform: scale(1.05);
+}
+
+/* ---------------- Event Cards ---------------- */
+#events-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+}
+
+.event-card {
+    background-color: rgb(0, 0, 0);
+    padding: 1%;
+    margin: 1%;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.event-card h2 {
+    text-shadow: 1px 1px var(--magenta), -1px -1px var(--cyan);
+    color: #ffffff;
+}
+
+.event-card p {
+    color: #ffffff;
+}
+
+.event-card:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px var(--cyan), 0 0 20px var(--magenta);
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.event-img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #000000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px var(--magenta), 0 0 15px var(--cyan);
+}
+
+/* ---------------- Buttons ---------------- */
+button {
+    font-family: 'Cabin', monospace;
+    background-color: #202020;
+    padding: 12px 25px;
+    margin: 2%;
+    border-radius: 10px;
+    border: 2px solid rgba(255,255,255,0.3);
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--cyan);
+    color: #000;
+    box-shadow: 0px 0px 12px var(--magenta), 0px 0px 15px var(--cyan);
+    transform: scale(1.05);
+}
+
+/* ---------------- Glitch Animation ---------------- */
+@keyframes glitch {
+    0% { text-shadow: 2px 2px var(--magenta), -2px -2px var(--cyan); }
+    50% { text-shadow: -2px -2px var(--magenta), 2px 2px var(--cyan); }
+    100% { text-shadow: 2px -2px var(--magenta), -2px 2px var(--cyan); }
+}
+
+.glitch {
+    display: inline-block;
+    animation: glitch 0.5s infinite alternate;
+}
+
+/* ---------------- Leaderboard ---------------- */
+.leaderboard-table {
+    width: 80%;
+    margin: 30px auto;
+    font-size: 1.1em;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: white; 
+    
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+    padding: 14px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.333);
+    
+}
+
+.leaderboard-table th {
+    font-size: 1.2em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-shadow: 1px 1px var(--magenta), -1px -1px var(--cyan);
+}
+
+.leaderboard-table tr:nth-child(even) {
+    background: rgba(0,255,0,0.02);
+}
+
+.leaderboard-table tr:hover {
+    background: rgba(41, 136, 160, 0.15);
+    transition: background 0.3s ease;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Battellgrounds Competition</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+<div class="header">
+    <div class="logo">
+        <img id="cup-logo" src="assets/Battell.jpg" alt="Logo">
+        <h1 class="header-text">Battellgrounds</h1>
+    </div>
+    <nav>
+        <a href="#about" class="nav-bar">About</a>
+        <a href="#events" class="nav-bar">Events</a>
+        <a href="#leaderboard" class="nav-bar">Leaderboard</a>
+    </nav>
+</div>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Battellgrounds</h2>
+      <p>
+        Battellgrounds is New Battell’s first building-wide competition. Floors earn points
+        through monthly events, participation, and keeping common spaces clean. At the end
+        of the year, the winning floor takes home the <strong>New Battell Cup</strong> and an
+        extra budget for a celebration.
+      </p>
+    </section>
+
+    <!-- Monthly Events -->
+    <section id="events">
+    <h2>Monthly Events</h2>
+    <div id="events-container">
+      <!-- Events will be populated here by JavaScript -->
+    <div>
+      <!-- Future events can be added here -->
+    </section>
+
+    <!-- Leaderboard -->
+<section id="leaderboard">
+  <h2>Leaderboard</h2>
+  <table class="leaderboard-table">
+    <thead>
+      <tr>
+        <th>Floor</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody id="leaderboard-body">
+      <tr>
+        <td>1st Floor</td>
+        <td>120</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>

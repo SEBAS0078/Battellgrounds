@@ -22,9 +22,10 @@ body {
 }
 
 /* ---------------- Header ---------------- */
-.header {        /* allows absolute positioning for .logo */
+.header {        
     display: flex; 
-    justify-self: center;      /* vertically center everything */
+    justify-content: center; /* horizontally centers children */
+    align-items: center;     /* vertically centers children */
     margin-top: 25px;
 }
 
@@ -78,6 +79,7 @@ h2 {
 p {
     font-family: 'Cabin', monospace;
     text-align: center;
+    margin: 10px;
 }
 
 /* ---------------- Navigation ---------------- */

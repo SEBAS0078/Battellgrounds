@@ -4,6 +4,7 @@
 :root {
     --cyan: #00ffff;
     --magenta: #ff00ff;
+    --header-bg: #000000;
 }
 
 /* ---------------- Body ---------------- */
@@ -21,24 +22,20 @@ body {
 }
 
 /* ---------------- Header ---------------- */
-.header {
-    position: relative;         /* allows absolute positioning for .logo */
-    display: flex;
-    align-items: center;        /* vertically center everything */
-    background-color: #3e3e3e;
-    padding: 5%;
-    margin: 0px; 
-
+.header {        /* allows absolute positioning for .logo */
+    display: flex; 
+    justify-self: center;      /* vertically center everything */
+    margin-top: 25px;
 }
 
 /* Center section: logo + title */
 .logo {
-    position: absolute;         /* remove from normal flow */
-    left: 45%;                  /* move center */
-    transform: translateX(-50%);/* truly center it */
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 12px;
+    justify-content: center;
+    gap: 10px;                  /* space between logo and title */
+    position: relative;         /* for absolute positioning of logo */
 }
 
 /* Logo image */
@@ -63,10 +60,8 @@ body {
 nav {
     margin-left: auto;          /* push navbar to the right */
     display: flex;
-    background-color: #545454;
-    padding: 1%;
-    border-radius: 10px;
-    gap: 10px;                  /* space between links */
+    background-color: var(--header-bg);
+    padding: 1%;                /* space between links */
 }
 
 
@@ -89,7 +84,7 @@ p {
 
 
 nav a {
-    color: var(--cyan);
+    color: white;
     text-decoration: none;
     padding: 8px;
     font-size: large;

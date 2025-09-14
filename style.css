@@ -73,8 +73,12 @@ h2 {
 p {
     font-family: 'Cabin', monospace;
     text-align: center;
-    margin: 10px;
 }
+
+h4 {
+    margin: 8px;
+}
+
 
 /* ---------------- Navigation ---------------- */
 

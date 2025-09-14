@@ -27,17 +27,11 @@ body {
     justify-content: center; /* horizontally centers children */
     align-items: center;     /* vertically centers children */
     margin-top: 25px;
+    flex-direction: column;
+    gap: 10px;                  /* space between logo and title */ 
 }
 
-/* Center section: logo + title */
-.logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;                  /* space between logo and title */
-    position: relative;         /* for absolute positioning of logo */
-}
+
 
 /* Logo image */
 #cup-logo {

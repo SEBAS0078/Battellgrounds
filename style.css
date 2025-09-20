@@ -10,7 +10,7 @@
 /* ---------------- Body ---------------- */
 body {
     font-family: 'Cabin', monospace;
-    background:  linear-gradient( #ffffff, #b0b0b0);
+    background:  linear-gradient( #ffffff, #c8c8c8);
     color:  #000000; 
     text-align: center;
     padding: 20px;
@@ -24,6 +24,7 @@ body {
 /* ---------------- Header ---------------- */
 .header {        
     display: flex; 
+    flex-direction: column;
     justify-content: center; /* horizontally centers children */
     align-items: center;     /* vertically centers children */
     margin-top: 25px;
@@ -211,4 +212,42 @@ button:hover {
 .leaderboard-table tr:hover {
     background: rgba(41, 136, 160, 0.15);
     transition: background 0.3s ease;
+}
+
+.attendees {
+  background: linear-gradient(135deg, #1e90ff, #00c3ff); /* blue gradient */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  width: 80%; 
+  display: inline-block; 
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 5px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+#event-explanation ul {
+  text-align: left;   /* align bullets and text to the left */
+  display: inline-block; /* keeps the list centered as a block, but text inside is left */
+  margin: 0 auto;     /* centers the whole block if needed */
+  padding-left: 20px; /* gives proper bullet indentation */
+}
+
+.winning-floor {
+  background: linear-gradient(135deg, gold, #e5c700);
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 10px;
+  display: inline-block; 
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.7);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  width: 80%
 }

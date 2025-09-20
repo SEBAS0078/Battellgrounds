@@ -22,6 +22,8 @@ function addEventsToPage(events) {
             <p><strong>Time:</strong> ${event.time}</p>
             <p><strong>Location:</strong> ${event.location}</p>
             <p>${event.description}</p>
+            <p class = "winning-floor"> Winner: ${event.winner}</p>
+            <p class ="attendees"> ${event.attendance} attended </p>
         `;
         eventContainer.appendChild(eventCard);
     }
@@ -46,7 +48,7 @@ function populateLeaderboard(data) {
 
         row.innerHTML = `
             <td>${floor.floor}</td>
-            <td>${floor.points}</td>
+            <td>${Math.round(floor.points)}</td>
         `;
 
         leaderboardTable.appendChild(row);

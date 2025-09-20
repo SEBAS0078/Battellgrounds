@@ -5,7 +5,9 @@ const events =  ` [
     "date": "Thursday, September 18",
     "time": "8:00 – 10:00 PM",
     "location": "New Battell First Floor Lounge",
-    "description": "Test your knowledge in History, Geography, Science & Nature, General Knowledge, and Sports. Snacks and refreshments provided!"
+    "description": "Test your knowledge in History, Geography, Science & Nature, General Knowledge, and Sports. Snacks and refreshments provided!", 
+    "attendance": 81, 
+    "winner": "3rd floor"
   }
 ]
 `

@@ -13,18 +13,30 @@ const eventContainer = document.getElementById("events-container");
 // create a function that adds all data from the games array to the page
 function addEventsToPage(events) {
     for (let event of events) {
-        let eventCard = document.createElement("div"); // create a new div element, which will become the game card
-        eventCard.classList.add("event-card"); // add the class game-card to the list
-        
+        let eventCard = document.createElement("div");
+        eventCard.classList.add("event-card");
+
+        // Conditionally render winner and attendance
+        let extraInfo = "";
+        if (event.status === "past") {
+            extraInfo = `
+                <p class="winning-floor"><strong>Winner:</strong> ${event.winner}</p>
+                <p class="attendees">${event.attendance} attended</p>
+            `;
+        }
+        else{
+            extraInfo = ` <p class="winning-floor"><strong></strong> ${event.status}</p>`
+        }
+
         eventCard.innerHTML = `
             <h2 class="event-title">${event.title}</h2>
-            <p><strong>Date:</strong> ${event.date}</p>
-            <p><strong>Time:</strong> ${event.time}</p>
+            <p><strong> ${event.date}</p></strong>
+            <p><strong> ${event.time}</p></strong>
             <p><strong>Location:</strong> ${event.location}</p>
             <p>${event.description}</p>
-            <p class = "winning-floor"> Winner: ${event.winner}</p>
-            <p class ="attendees"> ${event.attendance} attended </p>
+            ${extraInfo}
         `;
+
         eventContainer.appendChild(eventCard);
     }
 }

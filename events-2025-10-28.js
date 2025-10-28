@@ -16,9 +16,9 @@ const events =  ` [
   "time": "4:00 – 6:00 PM",
   "location": "New Battell First Floor Lounge",
   "description": "Join us for a fun pumpkin carving competition and represent your floor for October’s Battellgrounds event!",
-  "attendance": 0,
-  "winner": "NA", 
-  "status": "upcoming"
+  "attendance": 40,
+  "winner": "4th, 3rd and 1st Floors", 
+  "status": "past"
 }
 ]
 `

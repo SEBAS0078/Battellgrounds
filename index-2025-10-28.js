@@ -2,7 +2,7 @@
 
 // import the JSON data about the crowd funded games from the games.js file
 import EVENTS_DATA from './events-2025-10-28.js';
-import { LEADERBOARD } from './leaderboard.js';
+import { LEADERBOARD } from './leaderboard-2025-10-28.js';
 
 // create a list of objects to store the data about the games using JSON.parse
 const EVENTS_JSON = JSON.parse(EVENTS_DATA); 

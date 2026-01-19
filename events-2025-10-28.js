@@ -19,6 +19,16 @@ const events =  ` [
   "attendance": 40,
   "winner": "4th, 3rd and 1st Floors", 
   "status": "past"
+}, 
+{
+  "title": "Table Tennis Tournament",
+  "date": "Thursday, January 22",
+  "time": "6:30 – 8:30 PM",
+  "location": "New Battell First Floor Lounge",
+  "description": "Compete for your floor in a Battell Grounds table tennis tournament hosted by RAs Karolina and David. Complete the arts and crafts station to enter the tournament, or hang out with crafts, snacks, and hot chocolate. Bring friends from any building to boost your floor’s score.",
+  "attendance": null,
+  "winner": null,
+  "status": "upcoming"
 }
 ]
 `

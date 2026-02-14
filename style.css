@@ -128,7 +128,6 @@ nav a:hover {
 
 .event-card:hover {
     cursor: pointer;
-    box-shadow: 0 0 30px var(--cyan), 0 0 20px var(--magenta);
     transform: scale(1.05);
     z-index: 10;
 }

@@ -283,5 +283,7 @@ ul {
     text-align: center;
     transition: transform 0.35s ease;
     color: white; 
-    padding: 15px 30px; 
+    padding: 10px 25px; 
+    font-size: 1.6rem; 
+
 }

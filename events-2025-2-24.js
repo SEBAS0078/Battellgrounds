@@ -5,7 +5,7 @@ const events =  ` [
   "date": "Friday, February 27",
   "time": "4:30 – 6:00 PM",
   "location": "New Battell First Floor Lounge",
-  "description": "Compete to bring honor for your floor in a Battell Grounds board game tournament. Featuring Smash Bros, UNO, and Connect 4. There will be prizes and snacks",
+  "description": "Compete to bring honor for your floor in a game tournament. Featuring Smash Bros, UNO, and Connect 4. There will be prizes and snacks",
   "attendance": 1,
   "winner": "a",
   "status": "upcoming"

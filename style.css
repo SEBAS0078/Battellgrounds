@@ -100,22 +100,8 @@ nav a:hover {
 }
 
 /* ---------------- Event Cards ---------------- */
-#events-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    
-}
 
-.event-card {
-    background-color: rgb(0, 0, 0);
-    padding: 1%;
-    margin: 1%;
-    width: 300px;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
+
 
 .event-card h2 {
     text-shadow: 1px 1px var(--magenta), -1px -1px var(--cyan);
@@ -159,9 +145,7 @@ button {
 }
 
 button:hover {
-    background-color: var(--cyan);
     color: #000;
-    box-shadow: 0px 0px 12px var(--magenta), 0px 0px 15px var(--cyan);
     transform: scale(1.05);
 }
 
@@ -255,4 +239,49 @@ ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+#events-container {
+  display: flex;
+  transition: transform 0.4s ease;
+  gap: 1rem;
+}
+
+.event-card {
+  flex: 0 0 85%;   /* Mobile: 1 per view */
+  box-sizing: border-box;
+  margin: 1rem;
+    background-color: rgb(0, 0, 0);
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+@media (min-width: 768px) {
+  .event-card {
+    flex: 0 0 40%;   /* Tablet: 2 per view */
+  }
+}
+
+@media (min-width: 1100px) {
+  .event-card {
+    flex: 0 0 28%;  /* Desktop: 3 per view */
+  }
+}
+
+#prev-btn, #next-btn{
+    padding: 1rem;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.35s ease;
+    color: white; 
+    padding: 15px 30px; 
 }

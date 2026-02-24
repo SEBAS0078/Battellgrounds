@@ -30,13 +30,21 @@
     </section>
 
     <!-- Monthly Events -->
-    <section id="events">
-    <h2>Monthly Events</h2>
-    <div id="events-container">
-      <!-- Events will be populated here by JavaScript -->
-    <div>
-      <!-- Future events can be added here -->
-    </section>
+<section id="events">
+  <h2>Monthly Events</h2>
+
+  <div class="carousel-wrapper">
+    <div id="events-container"></div>
+  </div>
+
+  <div class="carousel-controls">
+    <button id="prev-btn">←</button>
+    <button id="next-btn">→</button>
+  </div>
+</section>
+
+
+</section>
 
     <!-- Leaderboard -->
 <section id="leaderboard">
@@ -91,7 +99,7 @@
 </div>
 
 
-    <script type="module" src="index-2025-2-14.js"></script>
+    <script type="module" src="index-2025-2-24.js"></script>
       <script>
     const version = "1.1"; // update this each release
     if (localStorage.getItem("siteVersion") !== version) {

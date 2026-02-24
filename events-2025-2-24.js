@@ -3,9 +3,9 @@ const events =  ` [
 {
   "title": "Board Game Competition",
   "date": "Friday, February 27",
-  "time": "4:00 – 6:00 PM",
+  "time": "4:30 – 6:00 PM",
   "location": "New Battell First Floor Lounge",
-  "description": "Compete for your floor in a Battell Grounds board game tournament. Featuring UNO, Jenga, Connect 4 and Chess.",
+  "description": "Compete to bring honor for your floor in a Battell Grounds board game tournament. Featuring Smash Bros, UNO, and Connect 4. There will be prizes and snacks",
   "attendance": 1,
   "winner": "a",
   "status": "upcoming"

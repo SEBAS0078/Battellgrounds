@@ -6,9 +6,9 @@ const events =  ` [
   "time": "4:30 – 6:00 PM",
   "location": "New Battell First Floor Lounge",
   "description": "Compete to bring honor for your floor in a game tournament. Featuring Smash Bros, UNO, and Connect 4. There will be prizes and snacks",
-  "attendance": 1,
-  "winner": "a",
-  "status": "upcoming"
+  "attendance": 37,
+  "winner": "3rd and 1st Floors",
+  "status": "past"
 }, {
   "title": "Table Tennis Tournament",
   "date": "Thursday, January 22",

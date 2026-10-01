@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width">
+    <link href="style-2026-9-30.css" rel="stylesheet" type="text/css" />
+    <link href="archive/archive.css" rel="stylesheet" type="text/css" />
+    <title>Battellgrounds Season</title>
+  </head>
+
+  <body>
+    <nav>
+      <a href="index.html" class="nav-bar">Current Season</a>
+      <a href="archive.html" class="nav-bar">Archive</a>
+      <a href="#champion" class="nav-bar">Champion</a>
+      <a href="#standings" class="nav-bar">Standings</a>
+      <a href="#events" class="nav-bar">Events</a>
+    </nav>
+
+    <div class="header">
+      <img id="cup-logo" src="assets/Battell.jpg" alt="Logo">
+      <h1 class="header-text" id="season-heading">Battellgrounds</h1>
+      <p class="season-tagline" id="season-tagline"></p>
+    </div>
+
+    <section id="champion"></section>
+
+    <section id="standings">
+      <h2>Final Standings</h2>
+      <div id="standings-list" class="standings"></div>
+    </section>
+
+    <section id="events">
+      <h2>Events</h2>
+      <p class="season-meta" id="events-summary"></p>
+      <div id="season-events" class="archive-events"></div>
+    </section>
+
+    <section id="scoring">
+      <h2>How Points Worked</h2>
+      <div class="rules" id="scoring-body"></div>
+    </section>
+
+    <p class="back-link"><a href="archive.html">← Back to all seasons</a></p>
+
+    <script type="module" src="archive/season.js"></script>
+  </body>
+</html>

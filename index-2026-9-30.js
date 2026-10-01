@@ -1,8 +1,9 @@
 
 
 // import the JSON data about the crowd funded games from the games.js file
-import EVENTS_DATA from './events-2025-2-28.js';
-import { LEADERBOARD } from './leaderboard-2025-2-28.js';
+import EVENTS_DATA from './events-2026-9-30.js';
+import { LEADERBOARD } from './leaderboard-2026-9-30.js';
+import { renderStandings } from './standings.js';
 
 // create a list of objects to store the data about the games using JSON.parse
 const EVENTS_JSON = JSON.parse(EVENTS_DATA); 
@@ -29,12 +30,18 @@ function addEventsToPage(events) {
             `;
         }
 
+        let hostInfo = "";
+        if (event.hosts && event.hosts.length) {
+            hostInfo = `<p><strong>Hosted by:</strong> ${event.hosts.join(" & ")}</p>`;
+        }
+
         eventCard.innerHTML = `
             <h2 class="event-title">${event.title}</h2>
             <p><strong>${event.date}</strong></p>
             <p><strong>${event.time}</strong></p>
             <p><strong>Location:</strong> ${event.location}</p>
             <p>${event.description}</p>
+            ${hostInfo}
             ${extraInfo}
         `;
 
@@ -47,30 +54,8 @@ addEventsToPage(EVENTS_JSON);
 
 
 
-//Automatically populate the leaderboard
-const leaderboardTable = document.getElementById("leaderboard-body");
-const sortedfloors =  LEADERBOARD.sort( (item1, item2) => {
-    return item2.points - item1.points;
-});
-
-function populateLeaderboard(data) {
-    // Clear existing rows
-    leaderboardTable.innerHTML = '';
-
-    data.forEach((floor, index) => {
-        const row = document.createElement('tr');
-
-        row.innerHTML = `
-            <td>${floor.floor}</td>
-            <td>${Math.round(floor.points)}</td>
-        `;
-
-        leaderboardTable.appendChild(row);
-    });
-}
-
-// Call the function to populate
-populateLeaderboard(sortedfloors);
+// Automatically populate the leaderboard
+renderStandings(document.getElementById("leaderboard-list"), LEADERBOARD);
 
 
 let currentIndex = 0;

@@ -3,10 +3,10 @@
   "label": "2026–2027",
   "tagline": "Season two",
   "floors": [
-    { "floor": "1st Floor", "points": 0, "ras": ["Clare", "Jonathan"] },
-    { "floor": "2nd Floor", "points": 0, "ras": ["Ale", "Cassidy", "Houda", "Olti"] },
-    { "floor": "3rd Floor", "points": 0, "ras": ["Galea", "Angel", "Sofiia", "Helen"] },
-    { "floor": "4th Floor", "points": 0, "ras": ["Sebastian", "Miya", "Bela", "Achiles"] }
+    { "floor": "1st Floor", "points": 100, "ras": ["Clare", "Jonathan"] },
+    { "floor": "2nd Floor", "points": 200, "ras": ["Ale", "Cassidy", "Houda", "Olti"] },
+    { "floor": "3rd Floor", "points": 40, "ras": ["Galea", "Angel", "Sofiia", "Helen"] },
+    { "floor": "4th Floor", "points": 60, "ras": ["Sebastian", "Miya", "Bela", "Achiles"] }
   ],
   "events": [
     {
@@ -14,7 +14,8 @@
       "start": "2026-09-30T20:45",
       "location": "New Battell First Floor Lounge",
       "description": "Kick off the second season of Battellgrounds! Test your knowledge and win the first points of the year for your floor.",
-      "hosts": ["Houda", "Olti"]
+      "hosts": ["Houda", "Olti"],
+      "winner": "2nd Floor"
     },
     {
       "title": "Baking Competition",

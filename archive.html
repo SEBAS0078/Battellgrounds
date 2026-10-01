@@ -2,13 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width">
-    <link href="style-2026-9-30.css" rel="stylesheet" type="text/css" />
-    <link href="archive/archive.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- When you change code or styles, bump ?v= here and in index.html and season.html -->
+    <link href="style.css?v=3" rel="stylesheet" type="text/css" />
     <title>Battellgrounds Archive</title>
   </head>
 
-  <body>
+  <body data-page="archive" class="subpage">
     <nav>
       <a href="index.html" class="nav-bar">Current Season</a>
       <a href="archive.html" class="nav-bar">Archive</a>
@@ -26,11 +26,19 @@
       </h4>
     </section>
 
+    <section id="plaque">
+      <h2>The Perpetual Plaque</h2>
+      <div class="plaque">
+        <p class="plaque-title">New Battell Cup Champions</p>
+        <div class="plaque-slots" id="plaque-slots"></div>
+      </div>
+    </section>
+
     <section>
       <h2>Past Seasons</h2>
       <div id="seasons-container" class="season-list"></div>
     </section>
 
-    <script type="module" src="archive/archive.js"></script>
+    <script type="module" src="js/app.js?v=3"></script>
   </body>
 </html>

@@ -2,19 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width">
-    <link href="style-2026-9-30.css" rel="stylesheet" type="text/css" />
-    <link href="archive/archive.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- When you change code or styles, bump ?v= here and in index.html and archive.html -->
+    <link href="style.css?v=3" rel="stylesheet" type="text/css" />
     <title>Battellgrounds Season</title>
   </head>
 
-  <body>
+  <body data-page="season" class="subpage">
     <nav>
       <a href="index.html" class="nav-bar">Current Season</a>
       <a href="archive.html" class="nav-bar">Archive</a>
-      <a href="#champion" class="nav-bar">Champion</a>
       <a href="#standings" class="nav-bar">Standings</a>
       <a href="#events" class="nav-bar">Events</a>
+      <a href="#gallery" class="nav-bar">Gallery</a>
+      <a href="#scoring" class="nav-bar">Rules</a>
     </nav>
 
     <div class="header">
@@ -26,7 +27,7 @@
     <section id="champion"></section>
 
     <section id="standings">
-      <h2>Final Standings</h2>
+      <h2 id="standings-heading">Final Standings</h2>
       <div id="standings-list" class="standings"></div>
     </section>
 
@@ -36,13 +37,25 @@
       <div id="season-events" class="archive-events"></div>
     </section>
 
+    <!-- Gallery (appears once the season has photos) -->
+    <section id="gallery" class="gallery-section" hidden>
+      <h2>Gallery</h2>
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </section>
+
     <section id="scoring">
       <h2>How Points Worked</h2>
+      <p class="section-intro" id="scoring-intro"></p>
       <div class="rules" id="scoring-body"></div>
+    </section>
+
+    <section id="record-notes" hidden>
+      <h3>About this record</h3>
+      <ul class="record-notes" id="record-notes-list"></ul>
     </section>
 
     <p class="back-link"><a href="archive.html">← Back to all seasons</a></p>
 
-    <script type="module" src="archive/season.js"></script>
+    <script type="module" src="js/app.js?v=3"></script>
   </body>
 </html>

@@ -1,0 +1,103 @@
+{
+  "id": "2025-2026",
+  "label": "2025–2026",
+  "tagline": "The inaugural season",
+  "notes": ["Event details and final points were copied from the live site as it stood at the end of the year.", "Poster Drawing (likely March) and Field Day were added later from RA recollection. Neither awarded points."],
+  "floors": [
+    { "floor": "1st Floor", "points": 359.97, "ras": ["Sebastian", "Zaina"] },
+    { "floor": "2nd Floor", "points": 188.36, "ras": ["Paw", "Alvaro", "Ananya", "Carlos"] },
+    { "floor": "3rd Floor", "points": 633.55, "ras": ["Jesus", "Houda", "Angel", "Nam", "Doreen"] },
+    { "floor": "4th Floor", "points": 439.65, "ras": ["Karo", "Elly", "David", "Liz", "Chimmy"] }
+  ],
+  "events": [
+    {
+      "title": "Trivia Night",
+      "start": "2025-09-18T20:00",
+      "end": "2025-09-18T22:00",
+      "location": "New Battell First Floor Lounge",
+      "description": "Test your knowledge in History, Geography, Science & Nature, General Knowledge, and Sports. Snacks and refreshments provided!",
+      "attendance": 81,
+      "winner": "3rd floor"
+    },
+    {
+      "title": "Pumpkin Carving",
+      "start": "2025-10-25T16:00",
+      "end": "2025-10-25T18:00",
+      "location": "New Battell First Floor Lounge",
+      "description": "Join us for a fun pumpkin carving competition and represent your floor for October’s Battellgrounds event!",
+      "attendance": 40,
+      "winner": "4th, 3rd and 1st Floors"
+    },
+    {
+      "title": "Table Tennis Tournament",
+      "start": "2026-01-22T18:30",
+      "end": "2026-01-22T20:30",
+      "location": "New Battell First Floor Lounge",
+      "description": "Compete for your floor in a Battell Grounds table tennis tournament hosted by RAs Karolina and David. Complete the arts and crafts station to enter the tournament, or hang out with crafts, snacks, and hot chocolate. Bring friends from any building to boost your floor’s score.",
+      "attendance": 61,
+      "winner": "4th floor"
+    },
+    {
+      "title": "Board Game Competition",
+      "start": "2026-02-27T16:30",
+      "end": "2026-02-27T18:00",
+      "location": "New Battell First Floor Lounge",
+      "description": "Compete to bring honor for your floor in a game tournament. Featuring Smash Bros, UNO, and Connect 4. There will be prizes and snacks",
+      "attendance": 37,
+      "winner": "3rd and 1st Floors"
+    },
+    {
+      "title": "Poster Drawing Competition",
+      "date": "March 2026",
+      "description": "Floors competed by drawing posters over a two-hour session.",
+      "hosts": ["Ananya"],
+      "attendance": 4,
+      "scored": false
+    },
+    {
+      "title": "Field Day",
+      "date": "May 2026",
+      "description": "An outdoor day of capture the flag, jump rope, sidewalk chalk painting, and other sports.",
+      "scored": false
+    }
+  ],
+  "scoring": {
+    "intro": "Every monthly event awarded points two ways: how many of a floor’s residents showed up, and how the floor placed.",
+    "participation": "Each floor earned points based on the percentage of its residents who attended.",
+    "guests": "<strong>Friends counted too.</strong> Residents could bring friends from any building to boost their floor’s score.",
+    "placements": [200, 100, 60, 40],
+    "prize": "The floor with the most points won the <strong>New Battell Cup</strong> and an extra budget for a floor celebration.",
+    "notes": ["Ties for a placement split that placement’s points evenly.", "Events without clear rankings were scored at the organizers’ discretion."]
+  },
+  "gallery": [
+    "assets/photos/2025-2026/packed-lounge.jpg",
+    {
+      "src": "assets/photos/2025-2026/pumpkin-carving-table.jpg",
+      "caption": "Pumpkin Carving"
+    },
+    {
+      "src": "assets/photos/2025-2026/pumpkin-carving-students.jpg",
+      "caption": "Pumpkin Carving"
+    },
+    {
+      "src": "assets/photos/2025-2026/pumpkin-carving-staff.jpg",
+      "caption": "Pumpkin Carving"
+    },
+    {
+      "src": "assets/photos/2025-2026/field-day-tug-of-war.jpg",
+      "caption": "Field Day: tug of war"
+    },
+    {
+      "src": "assets/photos/2025-2026/field-day-jump-rope.jpg",
+      "caption": "Field Day: jump rope"
+    },
+    {
+      "src": "assets/photos/2025-2026/field-day-spikeball.jpg",
+      "caption": "Field Day: Spikeball"
+    },
+    {
+      "src": "assets/photos/2025-2026/field-day-chalk.jpg",
+      "caption": "Field Day: sidewalk chalk"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "2026-2027",
+  "label": "2026–2027",
+  "tagline": "Season two",
+  "floors": [
+    { "floor": "1st Floor", "points": 0, "ras": ["Clare", "Jonathan"] },
+    { "floor": "2nd Floor", "points": 0, "ras": ["Ale", "Cassidy", "Houda", "Olti"] },
+    { "floor": "3rd Floor", "points": 0, "ras": ["Galea", "Angel", "Sofiia", "Helen"] },
+    { "floor": "4th Floor", "points": 0, "ras": ["Sebastian", "Miya", "Bela", "Achiles"] }
+  ],
+  "events": [
+    {
+      "title": "Trivia Night",
+      "start": "2026-09-30T20:45",
+      "location": "New Battell First Floor Lounge",
+      "description": "Kick off the second season of Battellgrounds! Test your knowledge and win the first points of the year for your floor.",
+      "hosts": ["Houda", "Olti"]
+    },
+    {
+      "title": "Baking Competition",
+      "date": "October — date TBA",
+      "description": "Bake and decorate a cake to win points for your floor!",
+      "hosts": ["Sofiia", "Helen"]
+    },
+    {
+      "title": "Ping Pong Tournament",
+      "date": "November — date TBA",
+      "description": "Grab a paddle and compete for your floor in the Battellgrounds ping pong tournament.",
+      "hosts": ["Clare", "Galea"]
+    },
+    {
+      "title": "Snowman Building Competition",
+      "date": "January — date TBA",
+      "description": "Build the best snowman for your floor, judged by impartial guests. Hot chocolate provided!",
+      "hosts": ["Cassidy", "Sebastian"]
+    }
+  ],
+  "scoring": {
+    "intro": "Every monthly event awards points two ways: how many of your floor’s residents show up, and how your floor places.",
+    "participation": "Each floor earns points based on the percentage of its residents who attend. The bigger your turnout, the bigger your score. Bring your floormates!",
+    "guests": "<strong>Bring your friends!</strong> Guests from other floors or buildings count toward the floor of the person who brought them. If you live on the 4th floor and bring three friends, all four of you count for the 4th floor.",
+    "placements": [200, 100, 60, 40],
+    "prize": "At the end of the year, the floor with the most points wins the <strong>New Battell Cup</strong>. The winning floor earns a permanent slot on the Battellgrounds perpetual plaque, plus a celebration event for the whole floor.",
+    "notes": ["If floors tie for a placement, that placement’s points are split evenly between them.", "Some events don’t have clear placements (participation-based activities, creative submissions, or collaborative events). Those are scored at the organizers’ discretion."]
+  },
+  "gallery": []
+}

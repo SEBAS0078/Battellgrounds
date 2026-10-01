@@ -2,52 +2,50 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width">
-    <link href="style-2026-9-30.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- When you change code or styles, bump ?v= here and in archive.html and season.html -->
+    <link href="style.css?v=3" rel="stylesheet" type="text/css" />
     <title>Battellgrounds Competition</title>
   </head>
 
-  <body>
-    <!-- Header -->
-         <nav>
-        <a href="#about" class="nav-bar">About</a>
-        <a href="#events" class="nav-bar">Events</a>
-        <a href="#leaderboard" class="nav-bar">Leaderboard</a>
-        <a href="#rules" class="nav-bar">Rules</a>
-        <a href="archive.html" class="nav-bar">Archive</a>
+  <body data-page="home">
+    <nav>
+      <a href="#about" class="nav-bar">About</a>
+      <a href="#events" class="nav-bar">Events</a>
+      <a href="#leaderboard" class="nav-bar">Leaderboard</a>
+      <a href="#champions" class="nav-bar">Plaque</a>
+      <a href="#rules" class="nav-bar">Rules</a>
+      <a href="archive.html" class="nav-bar">Archive</a>
     </nav>
-<div class="header">
-        <img id="cup-logo" src="assets/Battell.jpg" alt="Logo">
-        <h1 class="header-text">Battellgrounds</h1>
-</div>
 
-    <!-- About Section -->
+    <div class="header">
+      <img id="cup-logo" src="assets/Battell.jpg" alt="Logo">
+      <h1 class="header-text">Battellgrounds</h1>
+    </div>
+
+    <!-- About -->
     <section id="about">
       <h4>
-        Battellgrounds is back for its second season! Floors earn points
-        through monthly events, participation, and keeping common spaces clean. At the end
-        of the year, the winning floor takes home the <strong>New Battell Cup</strong> and an
-        extra budget for a celebration.
+        Battellgrounds is back for its second season! Floors earn points through monthly
+        events and participation. At the end of the year, the winning floor takes home the
+        <strong>New Battell Cup</strong>, a slot on the perpetual plaque, and a celebration event.
       </h4>
-      <p>
-        Last year’s champion: <strong>3rd Floor</strong> 🏆 —
-        <a href="season.html?id=2025-2026">see the 2025–2026 season</a>
-      </p>
+      <p id="last-champion"></p>
     </section>
 
     <!-- Monthly Events -->
-<section id="events">
-  <h2>Monthly Events</h2>
+    <section id="events">
+      <h2>Monthly Events</h2>
 
-  <div class="carousel-wrapper">
-    <div id="events-container"></div>
-  </div>
+      <div class="carousel-wrapper">
+        <div id="events-container"></div>
+      </div>
 
-  <div class="carousel-controls">
-    <button id="prev-btn">←</button>
-    <button id="next-btn">→</button>
-  </div>
-</section>
+      <div class="carousel-controls">
+        <button id="prev-btn" aria-label="Previous event">←</button>
+        <button id="next-btn" aria-label="Next event">→</button>
+      </div>
+    </section>
 
     <!-- Leaderboard -->
     <section id="leaderboard">
@@ -55,56 +53,38 @@
       <div id="leaderboard-list" class="standings"></div>
     </section>
 
+    <!-- Perpetual plaque + archive -->
+    <section id="champions" class="champions-section">
+      <h2>The Perpetual Plaque</h2>
+      <p class="section-intro">Every year, the winning floor earns a permanent slot. Whose name goes up next?</p>
+      <div class="plaque">
+        <p class="plaque-title">New Battell Cup Champions</p>
+        <div class="plaque-slots" id="plaque-slots"></div>
+      </div>
+
+      <a class="archive-teaser" href="archive.html">
+        <span class="archive-teaser-icon" aria-hidden="true">📚</span>
+        <span class="archive-teaser-text">
+          <strong>Explore the Archive</strong>
+          <span id="archive-teaser-detail">Every past season, preserved: events, final standings, RAs, and photos.</span>
+        </span>
+        <span class="archive-teaser-arrow" aria-hidden="true">→</span>
+      </a>
+    </section>
+
+    <!-- Gallery (appears once the season has photos) -->
+    <section id="gallery" class="gallery-section" hidden>
+      <h2>Gallery</h2>
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </section>
+
     <!-- Rules -->
     <section id="rules">
       <h2>How Points Work</h2>
-      <p class="section-intro">
-        Every monthly event awards points two ways: how many of your floor’s residents
-        show up, and how your floor places.
-      </p>
-
-      <div class="rules">
-        <div class="rule-card">
-          <p class="rule-icon">🙋</p>
-          <h3>Participation</h3>
-          <p>
-            Each floor earns points based on the percentage of its residents who attend.
-            The bigger your turnout, the bigger your score. Bring your floormates!
-          </p>
-        </div>
-
-        <div class="rule-card">
-          <p class="rule-icon">🏅</p>
-          <h3>Competition Results</h3>
-          <p>Events with clear rankings award bonus points by placement:</p>
-          <div class="placement-points">
-            <div class="placement placement-1"><p class="placement-place">1st</p><p class="placement-value">200</p></div>
-            <div class="placement placement-2"><p class="placement-place">2nd</p><p class="placement-value">100</p></div>
-            <div class="placement placement-3"><p class="placement-place">3rd</p><p class="placement-value">60</p></div>
-            <div class="placement"><p class="placement-place">4th</p><p class="placement-value">40</p></div>
-          </div>
-        </div>
-
-        <div class="rule-card rule-wide">
-          <h3>Good to know</h3>
-          <ul class="fine-print">
-            <li>If floors tie for a placement, that placement’s points are split evenly between them.</li>
-            <li>
-              Some events don’t have clear placements (participation-based activities, creative
-              submissions, or collaborative events). Those are scored at the organizers’ discretion.
-            </li>
-          </ul>
-        </div>
-      </div>
+      <p class="section-intro" id="rules-intro"></p>
+      <div class="rules" id="rules-body"></div>
     </section>
 
-    <script type="module" src="index-2026-9-30.js"></script>
-      <script>
-    const version = "1.2"; // update this each release
-    if (localStorage.getItem("siteVersion") !== version) {
-      localStorage.setItem("siteVersion", version);
-      location.reload(true);
-    }
-  </script>
+    <script type="module" src="js/app.js?v=3"></script>
   </body>
 </html>

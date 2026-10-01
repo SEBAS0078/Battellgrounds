@@ -70,7 +70,7 @@
     "notes": ["Ties for a placement split that placement’s points evenly.", "Events without clear rankings were scored at the organizers’ discretion."]
   },
   "gallery": [
-    "assets/photos/2025-2026/packed-lounge.jpg",
+    { "src": "assets/photos/2025-2026/trivia-night.jpg", "caption": "Trivia Night" },
     {
       "src": "assets/photos/2025-2026/pumpkin-carving-table.jpg",
       "caption": "Pumpkin Carving"

@@ -18,9 +18,10 @@
       "winner": "2nd Floor"
     },
     {
-      "title": "Baking Competition",
-      "date": "October — date TBA",
-      "description": "Bake and decorate a cake to win points for your floor!",
+      "title": "Halloween Cookie Challenge",
+      "start": "2026-10-25T16:00",
+      "location": "Battell Lounge",
+      "description": "Bake and decorate spooky Halloween cookies to win points for your floor!",
       "hosts": ["Sofiia", "Helen"]
     },
     {

@@ -45,46 +45,31 @@ function isToday(start) {
     return new Date(start).toDateString() === new Date().toDateString();
 }
 
-// ---------------- Calendar (.ics) ----------------
+// ---------------- Google Calendar ----------------
 
-function icsDate(date) {
+// Event times are New Battell (Vermont) local time
+const TIME_ZONE = "America/New_York";
+
+// "2026-10-25T16:00" -> "20261025T160000"
+function calendarTime(date) {
     const pad = n => String(n).padStart(2, "0");
     return `${date.getFullYear()}${pad(date.getMonth() + 1)}${pad(date.getDate())}T${pad(date.getHours())}${pad(date.getMinutes())}00`;
 }
 
-function icsText(text) {
-    return text.replace(/<[^>]*>/g, "").replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\n/g, "\\n");
-}
-
-// Downloads a calendar file that opens in Apple, Google or Outlook calendars.
+// Link that opens Google Calendar with the event filled in, ready to save.
 // Events without an end time are assumed to last two hours.
-export function downloadCalendarFile(event) {
+export function googleCalendarLink(event) {
     const start = new Date(event.start);
     const end = event.end ? new Date(event.end) : new Date(start.getTime() + 2 * 60 * 60 * 1000);
-    const slug = event.title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-
-    const lines = [
-        "BEGIN:VCALENDAR",
-        "VERSION:2.0",
-        "PRODID:-//New Battell//Battellgrounds//EN",
-        "BEGIN:VEVENT",
-        `UID:${icsDate(start)}-${slug}@battellgrounds`,
-        `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, "").split(".")[0]}Z`,
-        `DTSTART:${icsDate(start)}`,
-        `DTEND:${icsDate(end)}`,
-        `SUMMARY:${icsText(`Battellgrounds: ${event.title}`)}`,
-        event.location && `LOCATION:${icsText(event.location)}`,
-        event.description && `DESCRIPTION:${icsText(event.description)}`,
-        "END:VEVENT",
-        "END:VCALENDAR"
-    ].filter(Boolean);
-
-    const file = new Blob([lines.join("\r\n")], { type: "text/calendar" });
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(file);
-    link.download = `${slug}.ics`;
-    link.click();
-    URL.revokeObjectURL(link.href);
+    const params = new URLSearchParams({
+        action: "TEMPLATE",
+        text: `Battellgrounds: ${event.title}`,
+        dates: `${calendarTime(start)}/${calendarTime(end)}`,
+        ctz: TIME_ZONE,
+        details: event.description ?? "",
+        location: event.location ?? ""
+    });
+    return `https://calendar.google.com/calendar/render?${params}`;
 }
 
 // ---------------- Photo viewer ----------------
@@ -119,7 +104,9 @@ export function eventCard(event, { past, archived = false, cardClass = "event-ca
     let badges;
     if (!past) {
         badges = `<p class="winning-floor">${event.start && isToday(event.start) ? "Today!" : "Upcoming"}</p>`;
-        if (event.start) badges += `<button type="button" class="calendar-btn">📅 Add to calendar</button>`;
+        if (event.start) {
+            badges += `<a class="calendar-btn" href="${googleCalendarLink(event)}" target="_blank" rel="noopener">📅 Add to Google Calendar</a>`;
+        }
     } else if (event.scored === false) {
         badges = `<p class="winning-floor unrecorded">Not scored</p>`;
     } else if (event.winner) {
@@ -143,7 +130,6 @@ export function eventCard(event, { past, archived = false, cardClass = "event-ca
         <div class="event-badges">${badges}</div>
     `;
 
-    card.querySelector(".calendar-btn")?.addEventListener("click", () => downloadCalendarFile(event));
 
     return card;
 }

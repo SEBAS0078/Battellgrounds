@@ -57,13 +57,13 @@ async function renderHome() {
         `;
     }
 
-    // Events carousel, opening on the next upcoming event
+    // Events carousel: next event first, past events after it
     const container = document.getElementById("events-container");
     const now = new Date();
-    season.events.forEach(event => {
+    data.upcomingFirst(season.events, now).forEach(event => {
         container.appendChild(render.eventCard(event, { past: data.isPast(event, now) }));
     });
-    setUpCarousel(container, season.events.findIndex(event => !data.isPast(event, now)));
+    setUpCarousel(container);
 
     render.renderStandings(document.getElementById("leaderboard-list"), data.floorTotals(season));
 
@@ -81,10 +81,9 @@ async function renderHome() {
     document.getElementById("rules-intro").textContent = season.scoring.intro;
 }
 
-function setUpCarousel(container, nextIndex) {
+function setUpCarousel(container) {
     const cards = container.querySelectorAll(".event-card");
-    // Start on the most recent past event so the next one sits right beside it
-    let currentIndex = nextIndex === -1 ? Math.max(cards.length - 1, 0) : Math.max(nextIndex - 1, 0);
+    let currentIndex = 0;
 
     // Distance from one card to the next, including margins and gap
     function step() {

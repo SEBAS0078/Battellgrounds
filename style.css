@@ -695,13 +695,20 @@ ul {
 }
 
 .calendar-btn {
-    width: 80%;
+    display: block;
+    width: 80%; /* same sizing as the badge above it */
     margin: 10px 0 0;
     padding: 0.5rem 1rem;
     color: #fff;
     background-color: transparent;
     border: 2px solid var(--cyan);
+    border-radius: 10px;
+    font-family: 'Cabin', monospace;
     font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .calendar-btn:hover {

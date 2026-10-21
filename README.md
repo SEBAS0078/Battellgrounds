@@ -31,7 +31,7 @@ Open the current season's file (for example `data/2026-2027.json`) and edit the 
 }
 ```
 
-- `start` / `end` use the format `YYYY-MM-DDTHH:MM` (24-hour clock). The site turns them into "Wednesday, September 30" and "8:45 – 10:00 PM", and shows an **Add to calendar** button. `end` is optional.
+- `start` / `end` use the format `YYYY-MM-DDTHH:MM` (24-hour clock). The site turns them into "Wednesday, September 30" and "8:45 – 10:00 PM", and shows an **Add to Google Calendar** button. `end` is optional.
 - If the date isn't set yet, leave out `start` and write it out instead: `"date": "October — date TBA"`.
 - `location` and `hosts` are optional.
 
@@ -110,7 +110,7 @@ Code is in [`js/`](js/) and styles are in `style.css`:
 
 - `js/app.js`: page logic (each page sets `<body data-page="...">`)
 - `js/data.js`: loading data and ranking floors
-- `js/render.js`: event cards, leaderboard, gallery, rules, calendar files
+- `js/render.js`: event cards, leaderboard, gallery, rules, Google Calendar links
 
 After changing any code or styles, **bump the `?v=` number** in the `<link>` and `<script>` tags of `index.html`, `archive.html`, and `season.html` (e.g. `?v=1` → `?v=2`). That makes every visitor's browser load the new version.
 

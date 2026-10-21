@@ -45,6 +45,18 @@ export function isPast(event, now = new Date()) {
     return hasResults(event) || (event.start != null && new Date(event.start) < now);
 }
 
+// Homepage order: upcoming events soonest first (undated "TBA" ones after those),
+// then past events from most recent to oldest
+export function upcomingFirst(events, now = new Date()) {
+    const time = event => (event.start ? new Date(event.start).getTime() : null);
+    const upcoming = events.filter(event => !isPast(event, now));
+    const past = events.filter(event => isPast(event, now));
+
+    upcoming.sort((a, b) => (time(a) ?? Infinity) - (time(b) ?? Infinity));
+    past.sort((a, b) => (time(b) ?? -Infinity) - (time(a) ?? -Infinity));
+    return [...upcoming, ...past];
+}
+
 export function totalAttendance(season) {
     return season.events.reduce((sum, event) => sum + (event.attendance ?? 0), 0);
 }

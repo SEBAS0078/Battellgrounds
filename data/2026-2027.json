@@ -3,10 +3,10 @@
   "label": "2026–2027",
   "tagline": "Season two",
   "floors": [
-    { "floor": "1st Floor", "points": 100, "ras": ["Clare", "Jonathan"] },
-    { "floor": "2nd Floor", "points": 200, "ras": ["Ale", "Cassidy", "Houda", "Olti"] },
-    { "floor": "3rd Floor", "points": 40, "ras": ["Galea", "Angel", "Sofiia", "Helen"] },
-    { "floor": "4th Floor", "points": 60, "ras": ["Sebastian", "Miya", "Bela", "Achiles"] }
+    { "floor": "1st Floor", "points": 160.2, "ras": ["Clare", "Jonathan"] },
+    { "floor": "2nd Floor", "points": 605.1, "ras": ["Ale", "Cassidy", "Houda", "Olti"] },
+    { "floor": "3rd Floor", "points": 98, "ras": ["Galea", "Angel", "Sofiia", "Helen"] },
+    { "floor": "4th Floor", "points": 170.3, "ras": ["Sebastian", "Miya", "Bela", "Achiles"] }
   ],
   "events": [
     {
@@ -22,13 +22,16 @@
       "start": "2026-10-25T16:00",
       "location": "Battell Lounge",
       "description": "Bake and decorate spooky Halloween cookies to win points for your floor!",
-      "hosts": ["Sofiia", "Helen"]
+      "hosts": ["Sofiia", "Helen"],
+      "winner": "2nd Floor"
     },
     {
       "title": "Ping Pong Tournament",
-      "date": "November — date TBA",
+      "date": "November 2026",
       "description": "Grab a paddle and compete for your floor in the Battellgrounds ping pong tournament.",
-      "hosts": ["Clare", "Galea"]
+      "hosts": ["Clare", "Galea"],
+      "attendance": 23,
+      "winner": "2nd Floor"
     },
     {
       "title": "Snowman Building Competition",
@@ -39,7 +42,7 @@
   ],
   "scoring": {
     "intro": "Every monthly event awards points two ways: how many of your floor’s residents show up, and how your floor places.",
-    "participation": "Each floor earns points based on the percentage of its residents who attend. The bigger your turnout, the bigger your score. Bring your floormates!",
+    "participation": "Each floor earns 1 point for every percent of its residents who attend (10% turnout = 10 points). The bigger your turnout, the bigger your score. Bring your floormates!",
     "guests": "<strong>Bring your friends!</strong> Guests from other floors or buildings count toward the floor of the person who brought them. If you live on the 4th floor and bring three friends, all four of you count for the 4th floor.",
     "placements": [200, 100, 60, 40],
     "prize": "At the end of the year, the floor with the most points wins the <strong>New Battell Cup</strong>. The winning floor earns a permanent slot on the Battellgrounds perpetual plaque, plus a celebration event for the whole floor.",

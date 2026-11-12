@@ -46,14 +46,13 @@ export function isPast(event, now = new Date()) {
 }
 
 // Homepage order: upcoming events soonest first (undated "TBA" ones after those),
-// then past events from most recent to oldest
+// then past events from most recent to oldest. Events are listed in date order in
+// the season file, so past events are just that list reversed (this also works for
+// events with only a month, like "November 2026").
 export function upcomingFirst(events, now = new Date()) {
-    const time = event => (event.start ? new Date(event.start).getTime() : null);
-    const upcoming = events.filter(event => !isPast(event, now));
-    const past = events.filter(event => isPast(event, now));
-
-    upcoming.sort((a, b) => (time(a) ?? Infinity) - (time(b) ?? Infinity));
-    past.sort((a, b) => (time(b) ?? -Infinity) - (time(a) ?? -Infinity));
+    const time = event => (event.start ? new Date(event.start).getTime() : Infinity);
+    const upcoming = events.filter(event => !isPast(event, now)).sort((a, b) => time(a) - time(b));
+    const past = events.filter(event => isPast(event, now)).reverse();
     return [...upcoming, ...past];
 }
 

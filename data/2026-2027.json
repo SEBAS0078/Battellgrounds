@@ -3,10 +3,10 @@
   "label": "2026–2027",
   "tagline": "Season two",
   "floors": [
-    { "floor": "1st Floor", "points": 160.2, "ras": ["Clare", "Jonathan"] },
-    { "floor": "2nd Floor", "points": 605.1, "ras": ["Ale", "Cassidy", "Houda", "Olti"] },
-    { "floor": "3rd Floor", "points": 98, "ras": ["Galea", "Angel", "Sofiia", "Helen"] },
-    { "floor": "4th Floor", "points": 170.3, "ras": ["Sebastian", "Miya", "Bela", "Achiles"] }
+    { "floor": "1st Floor", "points": 176.5, "ras": ["Clare", "Jonathan"] },
+    { "floor": "2nd Floor", "points": 646.9, "ras": ["Ale", "Cassidy", "Houda", "Olti"] },
+    { "floor": "3rd Floor", "points": 105.6, "ras": ["Galea", "Angel", "Sofiia", "Helen"] },
+    { "floor": "4th Floor", "points": 186.8, "ras": ["Sebastian", "Miya", "Bela", "Achiles"] }
   ],
   "events": [
     {
@@ -15,6 +15,7 @@
       "location": "New Battell First Floor Lounge",
       "description": "Kick off the second season of Battellgrounds! Test your knowledge and win the first points of the year for your floor.",
       "hosts": ["Houda", "Olti"],
+      "attendance": 60,
       "winner": "2nd Floor"
     },
     {

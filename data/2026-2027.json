@@ -6,7 +6,7 @@
     { "floor": "1st Floor", "points": 230.5, "ras": ["Clare", "Jonathan"] },
     { "floor": "2nd Floor", "points": 683.9, "ras": ["Ale", "Cassidy", "Houda", "Olti"] },
     { "floor": "3rd Floor", "points": 227.6, "ras": ["Galea", "Angel", "Sofiia", "Helen"] },
-    { "floor": "4th Floor", "points": 246.8, "ras": ["Sebastian", "Miya", "Bela", "Achiles"] }
+    { "floor": "4th Floor", "points": 273.8, "ras": ["Sebastian", "Miya", "Bela", "Achiles"] }
   ],
   "events": [
     {
